@@ -5,14 +5,14 @@ const multer = require('multer');
 
 const checkAccount = require('../controllers/account/check-account-controller');
 const getProfile = require('../controllers/user/get-profile');
-const getTranslator = require('../controllers/user/get-translator');
+// const getTranslator = require('../controllers/user/get-translator');
 const uploadAvatar = require('../controllers/user/upload-avatar-controller');
 const updateProfile = require('../controllers/user/update-profile');
 
 const upload = multer();
 const router = express.Router();
 
-router.get('/users/:userId', getTranslator);
+// router.get('/users/:userId', getTranslator);
 router.get('/users', checkAccount, getProfile);
 
 router.post(

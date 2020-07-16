@@ -3,9 +3,9 @@
 const express = require('express');
 
 const getTranslator = require('../controllers/translators/get-translator-controller');
-const checkAccount = require('../controllers/translators/check-account-controller');
-const createProfile = require('../controllers/translators/create-profile');
-const updateProfile = require('../controllers/translators/update-profile');
+const checkAccount = require('../controllers/account/check-account-controller');
+const createProfile = require('../controllers/translators/create-profile-controller');
+const updateProfile = require('../controllers/translators/update-profile-controller');
 
 const router = express.Router();
 
