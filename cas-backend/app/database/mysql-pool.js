@@ -13,7 +13,7 @@ const {
   HEROKU_DATABASE,
   HEROKU_PASSWORD,
 } = process.env;
-
+console.log(MYSQL_HOST, MYSQL_USER, MYSQL_DATABASE, MYSQL_PASSWORD);
 let pool = null;
 
 /**
@@ -25,10 +25,10 @@ async function connect() {
 
   const options = {
     connectionLimit: 10,
-    host: HEROKU_HOST,
-    user: HEROKU_USER,
-    password: HEROKU_PASSWORD,
-    database: HEROKU_DATABASE,
+    host: MYSQL_HOST,
+    user: MYSQL_USER,
+    password: MYSQL_PASSWORD,
+    database: MYSQL_DATABASE,
     port: MYSQL_PORT,
     timezone: 'Z',
   };

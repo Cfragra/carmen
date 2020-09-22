@@ -24,7 +24,7 @@ const {
   accountRouter,
   userRouter,
   homeRouter,
-  translatorRouter,
+  translatorsRouter,
   searchRouter,
 } = require('./routes');
 
@@ -33,7 +33,7 @@ app.get('/', (req, res) => res.send('¡Bienvenido a Castiel Traducciones!'));
 app.use('/api', accountRouter);
 app.use('/api', userRouter);
 app.use('/api', homeRouter);
-app.use('/api', translatorRouter);
+app.use('/api', translatorsRouter);
 app.use('/api', searchRouter);
 
 let server = null;
